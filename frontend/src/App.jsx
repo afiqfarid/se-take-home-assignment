@@ -116,45 +116,45 @@ export default function App() {
     return (
         <div className="container mx-auto p-4 min-h-[100vh]">
 
-            <div className="flex justify-center items-center gap-4 mb-3">
+            <div className="flex justify-center items-center mb-3">
                 <img src="https://www.mcdonalds.com/content/dam/sites/usa/nfl/icons/arches-logo_108x108.jpg" alt="" width={80} />
-                <h1 className="text-2xl font-bold -ml-5">McDonald's Bot Order Processing</h1>
+                <h1 className="text-2xl font-bold">McDonald's Bot Order Processing</h1>
             </div>
 
-            <section className="flex justify-center items-center gap-4 mb-3">
+            <section className="flex justify-center flex-wrap items-center gap-3 mb-3">
                 <button 
                     onClick={() => createOrder("NORMAL")}
-                    className="bg-slate-100 p-5 cursor-pointer duration-100 hover:bg-slate-400"
+                    className="bg-slate-100 p-5 w-[175px] rounded-md cursor-pointer duration-100 hover:bg-[#e0f0ff]"
                 >
                     New Normal Order
                 </button>
 
                 <button 
                     onClick={() => createOrder("VIP")}
-                    className="bg-slate-100 p-5 cursor-pointer duration-100 hover:bg-slate-400"
+                    className="bg-slate-100 p-5 w-[175px] rounded-md cursor-pointer duration-100 hover:bg-[#ffe0e0]"
                 >
                     New VIP Order
                 </button>
             </section>
 
-            <section className="flex justify-center items-center gap-4 mb-3">
+            <section className="flex justify-center items-center gap-3 mb-3">
                 <button
                     onClick={addBot}
-                    className="bg-slate-100 py-2 px-4 cursor-pointer duration-100 hover:bg-slate-400"
+                    className="bg-slate-100 rounded-md py-2 px-4 cursor-pointer duration-100 hover:bg-slate-300"
                 >
                     + Bot
                 </button>
                 
                 <button
                     onClick={removeBot}
-                    className="bg-slate-100 py-2 px-4 cursor-pointer duration-100 hover:bg-slate-400"
+                    className="bg-slate-100 rounded-md py-2 px-4 cursor-pointer duration-100 hover:bg-slate-300"
                 >
                     - Bot
                 </button>
             </section>
 
             <section className="flex justify-center items-center gap-4 mb-3">
-                <p>Bots: {bots.length}</p>
+                <p>Available Bots: {bots.length}</p>
             </section>
 
             <section className="flex justify-center max-md:flex-wrap gap-4">

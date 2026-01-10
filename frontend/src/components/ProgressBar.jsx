@@ -25,15 +25,8 @@ export default function ProgressBar({ startedAt, duration }) {
     }, [startedAt, duration]);
 
     return (
-        <div style={{ marginTop: 6 }}>
-            <div
-                style={{
-                    height: 6,
-                    background: "#ddd",
-                    borderRadius: 4,
-                    overflow: "hidden",
-                }}
-            >
+        <div className="mt-2">
+            <div className="h-[6px] bg-[#ddd] rounded-sm overflow-hidden">
                 <div
                     style={{
                         height: "100%",
@@ -43,7 +36,7 @@ export default function ProgressBar({ startedAt, duration }) {
                 />
             </div>
 
-            <div style={{ fontSize: 12, marginTop: 4 }}>
+            <div className="text-xs mt-2">
                 {Math.ceil(remaining / 1000)}s remaining
             </div>
         </div>
